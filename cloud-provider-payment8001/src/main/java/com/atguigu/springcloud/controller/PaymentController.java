@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -25,7 +26,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment/create")
-    public CommonResult<PaymentBO> createPayment(PaymentRequest request) {
+    public CommonResult<PaymentBO> createPayment(@RequestBody PaymentRequest request) {
 
         Integer result = paymentService.createPayment(BeanCopyUtil.copyProperties(request, new PaymentBO()));
         log.info("******插入结果：{}", result);

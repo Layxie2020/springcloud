@@ -23,7 +23,7 @@ public class PaymentServiceImpl implements PaymentService {
     public Integer createPayment(PaymentBO paymentBO) {
         PaymentDO paymentDO = new PaymentDO();
         BeanUtils.copyProperties(paymentBO,paymentDO);
-        return paymentDOMapper.insert(paymentDO);
+        return paymentDOMapper.insertSelective(paymentDO);
     }
 
     @Override
