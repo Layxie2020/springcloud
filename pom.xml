@@ -10,6 +10,7 @@
   <modules>
     <module>cloud-provider-payment8001</module>
     <module>cloud-consumer-order8002</module>
+      <module>cloud-api-common</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -87,7 +88,11 @@
         <version>${lombok.version}</version>
         <optional>true</optional>
       </dependency>
-
+      <dependency>
+        <groupId>com.atguigu.springcloud</groupId>
+        <artifactId>cloud-api-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

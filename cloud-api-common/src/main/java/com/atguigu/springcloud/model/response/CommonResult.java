@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.model;
+package com.atguigu.springcloud.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

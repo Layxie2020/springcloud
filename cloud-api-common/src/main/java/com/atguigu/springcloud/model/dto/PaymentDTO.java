@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.model;
+package com.atguigu.springcloud.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
